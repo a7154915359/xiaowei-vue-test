@@ -143,7 +143,7 @@ export default {
       var _this = this
       this.$axios.get('/admin/user').then(resp => {
         if (resp && resp.status === 200) {
-          _this.users = resp.data
+          _this.users = resp.data.data
         }
       })
     },
@@ -151,7 +151,7 @@ export default {
       var _this = this
       this.$axios.get('/admin/role').then(resp => {
         if (resp && resp.status === 200) {
-          _this.roles = resp.data
+          _this.roles = resp.data.data
         }
       })
     },
